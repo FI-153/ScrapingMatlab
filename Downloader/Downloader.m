@@ -15,7 +15,7 @@ for anno = 2019:-1:2015
   %Download del file
   websave(nome_File, path');
   
-  %Pulisce spazio di lavoro
+  %Pulisce workspace
   clear
   
 end
