@@ -7,8 +7,8 @@ for anno = 2019:-1:2015
   annoStr = int2str(anno);
     
   %Nome del file scaricato
-  nome_File_BGO = (append('BGO_', annoStr));      %Benzina, gasolio, olio
-  nome_File_GL = (append('GL_', annoStr));        %GPL, lubrificanti
+  nome_File_BGO = (append(annoStr,'_BGO'));      %Benzina, gasolio, olio
+  nome_File_GL = (append(annoStr, '_GL'));        %GPL, lubrificanti
   
   %Costruzione dinamica dell'URL
   path_BGO = append('https://dgsaie.mise.gov.it/pub/bollettino/',annoStr,'/vendite_prov_benzina_gasolio_oliocomb_',annoStr,'_12_m.xls');
