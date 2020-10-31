@@ -1,7 +1,7 @@
-%fogli scaricati vengono salvati in questa certella
-cd FogliScaricati/
+function Downloader19_14
 
-for anno = 2019:-1:2015
+cd FogliScaricati/
+  for anno = 2019:-1:2015
     
   %Conversione dell'anno in stringa
   annoStr = int2str(anno);
@@ -34,7 +34,8 @@ for anno = 2019:-1:2015
   %Pulisce workspace
   clear
   
-end
+  end
+  
+ cd ..
 
-%torna nella cartella dello script
-cd ..
+end

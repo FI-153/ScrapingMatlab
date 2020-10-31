@@ -1,4 +1,5 @@
-%fogli scaricati vengono salvati in questa certella
+function Downloader14_03
+
 cd FogliScaricati/
 
 for anno = 2013:-1:2003
@@ -24,3 +25,6 @@ end
 
 %torna nella cartella dello script
 cd ..
+
+end
+
