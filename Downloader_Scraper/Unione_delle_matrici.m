@@ -2,13 +2,13 @@
 %Parte benzina
 
 %Importo le caratteristiche della Tabella in excel
-opts = detectImportOptions('FogliScaricati/BGO_2019.xls');
+opts = detectImportOptions('FogliScaricati/2019_BGO.xls');
 
 %Seleziono solo le colonne che mi servono davvero (NO C G N)
 opts.SelectedVariableNames = opts.SelectedVariableNames([1,2,4,5,6,8,9,10,11,12,13,15]);
 
 %Importo la tabella e le condizioni
-Table = readtable('FogliScaricati/BGO_2019.xls', opts)
+Table = readtable('FogliScaricati/2019_BGO.xls', opts);
 
 %Converto la tabella in una cella / simile ad un array
 Cell = table2cell(Table);
@@ -38,9 +38,9 @@ Cella_finale = [Anno2,Ordered_cell];
 
 %parte 2 unisco i gpl del relativo anno
 
-opzioni = detectImportOptions('FogliScaricati/GL_2019.xls');
+opzioni = detectImportOptions('FogliScaricati/2019_GL.xls');
 opzioni.SelectedVariableNames = opzioni.SelectedVariableNames([1,3,4,5,6,7]);
-Table2 = readtable('FogliScaricati/GL_2019.xls', opzioni)
+Table2 = readtable('FogliScaricati/2019_GL.xls', opzioni);
 
 Cell2 = table2cell(Table2);
 Ordered_cell2 = sortrows(Cell2);

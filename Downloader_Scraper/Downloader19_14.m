@@ -1,14 +1,14 @@
-%fogli scaricati vengono salvati in questa certella
-cd FogliScaricati/
+function Downloader19_14
 
-for anno = 2019:-1:2015
+cd FogliScaricati/
+  for anno = 2019:-1:2015
     
   %Conversione dell'anno in stringa
   annoStr = int2str(anno);
     
   %Nome del file scaricato
-  nome_File_BGO = (append('BGO_', annoStr));      %Benzina, gasolio, olio
-  nome_File_GL = (append('GL_', annoStr));        %GPL, lubrificanti
+  nome_File_BGO = (append(annoStr,'_BGO'));      %Benzina, gasolio, olio
+  nome_File_GL = (append(annoStr, '_GL'));        %GPL, lubrificanti
   
   %Costruzione dinamica dell'URL
   path_BGO = append('https://dgsaie.mise.gov.it/pub/bollettino/',annoStr,'/vendite_prov_benzina_gasolio_oliocomb_',annoStr,'_12_m.xls');
@@ -34,7 +34,8 @@ for anno = 2019:-1:2015
   %Pulisce workspace
   clear
   
-end
+  end
+  
+ cd ..
 
-%torna nella cartella dello script
-cd ..
+end
