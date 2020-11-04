@@ -21,7 +21,7 @@ cd FogliScaricati/
   end
   
   
-  %PROBLEMA DA DISCUTERE CON PROFE 
+  %Differente indirizzo unicamente per il 2015 
   if anno == 2015; 
       path_GL = 'https://dgsaie.mise.gov.it/pub/bollettino/2015/vendite_prov_gpl_lub_2015_p.xlsx'; 
   end
