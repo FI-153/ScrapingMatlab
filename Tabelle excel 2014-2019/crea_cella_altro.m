@@ -17,5 +17,10 @@ for int = 1:1:21
     ordered_cell(1,:) = [];
 end
 
+col_1 = ordered_cell(:,1); 
+pos = find(contains(col_1,'TT'));
+
+ordered_cell(pos,:) = [];
+
 nuova_cella = ordered_cell;
 end

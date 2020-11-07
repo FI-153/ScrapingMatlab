@@ -1,1 +1,1 @@
-TABELLONE = tabella_totale_2014_2019()
+TABELLONE = tabella_totale_2014_2019();
