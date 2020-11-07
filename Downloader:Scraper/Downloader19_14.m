@@ -1,7 +1,7 @@
 function Downloader19_14
 
 cd FogliScaricati/
-  for anno = 2019:-1:2015
+  for anno = 2019:-1:2014
     
   %Conversione dell'anno in stringa
   annoStr = int2str(anno);
@@ -20,8 +20,12 @@ cd FogliScaricati/
       path_GL = append(path_GL, 'x');  
   end
   
+  if anno == 2014;
+     path_BGO = 'https://dgsaie.mise.gov.it/pub/bollettino/2014/vendite_prov_benzina_gasolio_oliocomb_2014_p.xls';
+     path_GL = 'https://dgsaie.mise.gov.it/pub/bollettino/2014/vendite_prov_gpl_lub_2014_p.xls';
+  end
   
-  %Differente indirizzo unicamente per il 2015 
+  %PROBLEMA DA DISCUTERE CON PROFE 
   if anno == 2015; 
       path_GL = 'https://dgsaie.mise.gov.it/pub/bollettino/2015/vendite_prov_gpl_lub_2015_p.xlsx'; 
   end
