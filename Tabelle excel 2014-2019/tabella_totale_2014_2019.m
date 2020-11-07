@@ -9,8 +9,4 @@ tab2019= crea_tabella_annuale_altro('benzina_2019.xls', 'gpl_2019.xls', 2019);
 
 tabella_totale = [tab2014; tab2015; tab2016; tab2017; tab2018; tab2019];
 
-
-
-
-
 end

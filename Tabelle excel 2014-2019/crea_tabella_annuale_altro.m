@@ -1,5 +1,5 @@
 function nuova_tabella = crea_tabella_annuale_altro(nome_cella_benzina, nome_cella_gpl, anno)
-%creo funzione che crea table annuale con le celle benzina, gasolio, olii
+%funzione che crea table annuale con le celle benzina, gasolio, olii
 
 pos_benzina = [1,2,4,5,6,8,9,10,11,12,13,15];
 pos_gpl = [1,3,4,5,6,7];
