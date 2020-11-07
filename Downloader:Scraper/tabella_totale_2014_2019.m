@@ -1,12 +1,24 @@
 function tabella_totale = tabella_totale_2014_2019()
 
-tab2014= crea_tabella_annuale_altro('benzina_2014.xls', 'gpl_2014.xls', 2014);
-tab2015= crea_tabella_annuale_altro('benzina_2015.xlsx', 'gpl_2015.xlsx', 2015);
-tab2016= crea_tabella_annuale_altro('benzina_2016.xlsx', 'gpl_2016.xlsx', 2016);
-tab2017= crea_tabella_annuale_altro('benzina_2017.xls', 'gpl_2017.xls', 2017);
-tab2018= crea_tabella_annuale_altro('benzina_2018.xls', 'gpl_2018.xls', 2018);
-tab2019= crea_tabella_annuale_altro('benzina_2019.xls', 'gpl_2019.xls', 2019);
+tabella_totale = [];
 
-tabella_totale = [tab2014; tab2015; tab2016; tab2017; tab2018; tab2019];
+for anno = 2019 :-1:2014
+    
+    annoStr = int2str(anno);
+    
+    pathBGO = append('FogliScaricati/',annoStr,'_BGO.xls');
+    pathGL = append('FogliScaricati/',annoStr,'_GL.xls');
+    
+    if (anno == 2015)
+        pathBGO = append(pathBGO,'x');
+        pathGL = append(pathGL,'x');
+    end
+    if (anno == 2016)
+        pathBGO = append(pathBGO,'x');
+        pathGL = append(pathGL,'x');
+    end
+    
+    tabella_totale = [tabella_totale; crea_tabella_annuale_altro(pathBGO, pathGL, anno)];
+end
 
 end
